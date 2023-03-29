@@ -88,14 +88,14 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-> git clone https://github.com/DavidEspinoG/math_magicians.git
+> git clone https://github.com/DavidEspinoG/microverse_bookstore.git
 > (you can open it via live server in VS)
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-> git clone https://github.com/DavidEspinoG/math_magicians.git
+> git clone https://github.com/DavidEspinoG/microverse_bookstore.git
 
 ### Install
 
@@ -150,7 +150,7 @@ use chosen hosting service or github pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/DavidEspinoG/math_magicians/issues/).
+Feel free to check the [issues page](https://github.com/DavidEspinoG/microverse_bookstore.git).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
