@@ -10,7 +10,6 @@ const categoriesSlice = createSlice({
     check: (state) => state.message,
   },
 });
-console.log(categoriesSlice.actions.check)
 export const categoriesReducer = categoriesSlice.reducer;
 
 export const { check } = categoriesSlice.actions;
