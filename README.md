@@ -24,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magicians <a id="about-project"></a>
+# 📖 Bookstore <a id="about-project"></a>
 
-SPA created using React.js, it includes it's own calculator, a home page and a Quote Section. 
+Project created using React and redux. The bookstore web page lets the user track the progress of his current lecture and keep the record of previously read books. 
 
 ## 🛠 Built With <a id="built-with"></a>
 
@@ -35,11 +35,12 @@ SPA created using React.js, it includes it's own calculator, a home page and a Q
 > HTML & SCSS
 > Javascript
 > React
+> Redux
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">HTML, SCSS & React</a></li>
+    <li><a href="#">HTML, CSS, React & Redux</a></li>
   </ul>
 </details>
 
@@ -62,8 +63,8 @@ SPA created using React.js, it includes it's own calculator, a home page and a Q
 
 ### Key Features <a id="key-features"></a>
 
-- Calculator
-- Quote section
+- Keep track of the book you're currently reading
+- List the books you have read in the past
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,7 +73,7 @@ SPA created using React.js, it includes it's own calculator, a home page and a Q
 ## 🚀 Live Demo <a id="live-demo"></a>
 
 
-- [Live demo](https://math-magicians-pqa2.onrender.com/)
+***Deploy pending ***
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -82,43 +83,39 @@ SPA created using React.js, it includes it's own calculator, a home page and a Q
 ## 💻 Getting Started <a id="getting-started"></a>
 
 
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
 In order to run this project you need:
 
-> git clone https://github.com/DavidEspinoG/microverse_bookstore.git
-> (you can open it via live server in VS)
+> npm run start
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-> git clone https://github.com/DavidEspinoG/microverse_bookstore.git
+> git clone https://github.com/DavidEspinoG/microverse_bookstore.git 
+
 
 ### Install
 
 Install this project with:
 
-npm install
+> npm  i
 
 ### Usage
 
-To run the project just open it in VS and run liveServer
+> npm run start
 
 
 ### Run tests
 
 To run tests, run the following command:
 
-npm run fix
+> npm run fix
 
 ### Deployment
 
-You can deploy this project using:
-
-use chosen hosting service or github pages
+> npm run build
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
