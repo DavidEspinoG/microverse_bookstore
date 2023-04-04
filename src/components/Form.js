@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../api';
-import { fetchBooks, setError } from '../redux/books/booksSlice';
+import { addBookLocal, setError } from '../redux/books/booksSlice';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,13 @@ const Form = () => {
     e.preventDefault();
     try {
       await addBook(title, author);
-      dispatch(fetchBooks());
+      const newBook = {
+        author,
+        title,
+        category: 'Comedy',
+        id: title + author,
+      };
+      dispatch(addBookLocal(newBook));
       setTitle('');
       setAuthor('');
     } catch {

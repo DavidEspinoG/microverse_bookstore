@@ -111,6 +111,8 @@ To run tests, run the following command:
 ## 🔭 Future Features <a id="future-features"></a>
 
 - Nicer styling is going to be implemented
+- A nice graph is going to let you know how many pages you need to finish the book 
+- A categories page for grouping the books you have read
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

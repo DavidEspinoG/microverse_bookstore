@@ -21,31 +21,42 @@ const booksSlice = createSlice({
   initialState,
   reducers: {
     setError(state, action) {
-      // eslint-disable-next-line no-param-reassign
-      state.error = action.payload;
+      return {
+        ...state,
+        error: action.payload,
+      };
     },
     setLoading(state, action) {
-      // eslint-disable-next-line no-param-reassign
-      state.loading = action.payload;
+      return {
+        ...state,
+        loading: action.payload,
+      };
+    },
+    addBookLocal(state, action) {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.books[action.payload.id] = [{
+        title: action.payload.title,
+        author: action.payload.author,
+        category: action.payload.category,
+      }];
+      return newState;
     },
   },
   extraReducers(builder) {
     builder
-      .addCase(fetchBooks.fulfilled, (state, action) => {
-        // eslint-disable-next-line no-param-reassign
-        state.loading = false;
-        // eslint-disable-next-line no-param-reassign
-        state.books = action.payload;
-      })
-      .addCase(fetchBooks.rejected, (state) => {
-        // eslint-disable-next-line no-param-reassign
-        state.loading = false;
-        // eslint-disable-next-line no-param-reassign
-        state.error = true;
-      });
+      .addCase(fetchBooks.fulfilled, (state, action) => ({
+        ...state,
+        loading: false,
+        books: action.payload,
+      }))
+      .addCase(fetchBooks.rejected, (state) => ({
+        ...state,
+        loading: false,
+        error: true,
+      }));
   },
 });
 
 export const booksReducer = booksSlice.reducer;
-export const { setError, setLoading } = booksSlice.actions;
+export const { setError, setLoading, addBookLocal } = booksSlice.actions;
 export { fetchBooks };
