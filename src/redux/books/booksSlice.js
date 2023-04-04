@@ -1,40 +1,69 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getBooks } from '../../api';
 
-const initialState = [
-  {
-    item_id: 1,
-    title: 'The Great Gatsby',
-    author: 'John Smith',
-    category: 'Fiction',
+const fetchBooks = createAsyncThunk(
+  'books/fetch',
+  async () => {
+    const data = await getBooks();
+    const books = data;
+    return books;
   },
-  {
-    item_id: 2,
-    title: 'Anna Karenina',
-    author: 'Leo Tolstoy',
-    category: 'Fiction',
-  },
-  {
-    item_id: 3,
-    title: 'The Selfish Gene',
-    author: 'Richard Dawkins',
-    category: 'Nonfiction',
-  },
-];
+);
+
+const initialState = {
+  books: [],
+  loading: true,
+  error: false,
+};
 
 const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    add(state, action) {
-      state.push(action.payload);
+    setError(state, action) {
+      return {
+        ...state,
+        error: action.payload,
+      };
     },
-    remove(state, action) {
-      const index = state.findIndex((state) => state.item_id === action.payload);
-      state.splice(index, 1);
+    setLoading(state, action) {
+      return {
+        ...state,
+        loading: action.payload,
+      };
     },
+    addBookLocal(state, action) {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState.books[action.payload.id] = [{
+        title: action.payload.title,
+        author: action.payload.author,
+        category: action.payload.category,
+      }];
+      return newState;
+    },
+    deleteBookLocal(state, action) {
+      const newState = JSON.parse(JSON.stringify(state));
+      delete newState.books[`${action.payload}`];
+      return newState;
+    },
+  },
+  extraReducers(builder) {
+    builder
+      .addCase(fetchBooks.fulfilled, (state, action) => ({
+        ...state,
+        loading: false,
+        books: action.payload,
+      }))
+      .addCase(fetchBooks.rejected, (state) => ({
+        ...state,
+        loading: false,
+        error: true,
+      }));
   },
 });
 
 export const booksReducer = booksSlice.reducer;
-
-export const { add, remove } = booksSlice.actions;
+export const {
+  setError, setLoading, addBookLocal, deleteBookLocal,
+} = booksSlice.actions;
+export { fetchBooks };

@@ -3,11 +3,10 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Math magician ](#-capstone_project_2_api-)
+- [📖 BookStore ](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -44,37 +43,12 @@ Project created using React and redux. The bookstore web page lets the user trac
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="#">N/A</a></li>
-    <li><a href="#">N/A</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="#">N/A</a></li>
-  </ul>
-</details>
-
 <!-- Features -->
 
 ### Key Features <a id="key-features"></a>
 
 - Keep track of the book you're currently reading
 - List the books you have read in the past
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a id="live-demo"></a>
-
-
-***Deploy pending ***
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +61,7 @@ Project created using React and redux. The bookstore web page lets the user trac
 
 In order to run this project you need:
 
-> npm run start
+- Node.js
 
 ### Setup
 
@@ -104,14 +78,14 @@ Install this project with:
 
 ### Usage
 
-> npm run start
+> npm start
 
 
 ### Run tests
 
 To run tests, run the following command:
 
-> npm run fix
+> npm run test
 
 ### Deployment
 
@@ -136,13 +110,13 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-
 - Nicer styling is going to be implemented
+- A nice graph is going to let you know how many pages you need to finish the book 
+- A categories page for grouping the books you have read
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
-
 ## 🤝 Contributing <a id="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
