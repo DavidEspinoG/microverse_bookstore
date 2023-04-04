@@ -20,8 +20,13 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    add(state, action) {
-      state.books.push(action.payload);
+    setError(state, action) {
+      // eslint-disable-next-line no-param-reassign
+      state.error = action.payload;
+    },
+    setLoading(state, action) {
+      // eslint-disable-next-line no-param-reassign
+      state.loading = action.payload;
     },
   },
   extraReducers(builder) {
@@ -42,5 +47,5 @@ const booksSlice = createSlice({
 });
 
 export const booksReducer = booksSlice.reducer;
-export const { add } = booksSlice.actions;
+export const { setError, setLoading } = booksSlice.actions;
 export { fetchBooks };

@@ -1,13 +1,17 @@
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../api';
-import { fetchBooks } from '../redux/books/booksSlice';
+import { fetchBooks, setError } from '../redux/books/booksSlice';
 
 const Book = ({ title, author, id }) => {
   const dispatch = useDispatch();
   const clickHandler = async (id) => {
-    await deleteBook(id);
-    dispatch(fetchBooks());
+    try {
+      await deleteBook(id);
+      dispatch(fetchBooks());
+    } catch {
+      dispatch(setError(true));
+    }
   };
   return (
     <div>

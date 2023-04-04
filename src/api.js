@@ -20,4 +20,15 @@ const deleteBook = async (id) => {
   return res;
 };
 
-export { deleteBook, getBooks };
+const addBook = async (title, author) => {
+  const body = {
+    item_id: title + author,
+    title,
+    author,
+    category: 'Drama',
+  };
+  const res = await axios.post(baseUrl, body);
+  return res;
+};
+
+export { deleteBook, getBooks, addBook };

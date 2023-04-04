@@ -1,26 +1,22 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { add } from '../redux/books/booksSlice';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../api';
+import { fetchBooks, setError } from '../redux/books/booksSlice';
 
 const Form = () => {
-  const books = useSelector((state) => state.books);
-  const getId = (books) => {
-    const ids = books.map((element) => element.item_id);
-    const max = Math.max(...ids);
-    return max + 1;
-  };
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    const newBook = {
-      item_id: getId(books),
-      title,
-      author,
-      category: 'fiction',
-    };
-    dispatch(add(newBook));
+    try {
+      await addBook(title, author);
+      dispatch(fetchBooks());
+      setTitle('');
+      setAuthor('');
+    } catch {
+      dispatch(setError(true));
+    }
   };
   const changeTitleHandler = (e) => {
     setTitle(e.target.value);
@@ -35,12 +31,14 @@ const Form = () => {
         type="text"
         name="title"
         placeholder="Book title"
+        value={title}
       />
       <input
         onChange={changeAuthorHandler}
         type="text"
         name="author"
         placeholder="Book author"
+        value={author}
       />
       <button
         type="submit"
