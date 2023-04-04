@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import getBooks from '../../api';
+import { getBooks } from '../../api';
 
 const fetchBooks = createAsyncThunk(
   'books/fetch',
@@ -21,11 +21,7 @@ const booksSlice = createSlice({
   initialState,
   reducers: {
     add(state, action) {
-      state.push(action.payload);
-    },
-    remove(state, action) {
-      const index = state.findIndex((state) => state.item_id === action.payload);
-      state.splice(index, 1);
+      state.books.push(action.payload);
     },
   },
   extraReducers(builder) {
@@ -46,5 +42,5 @@ const booksSlice = createSlice({
 });
 
 export const booksReducer = booksSlice.reducer;
-export const { add, remove } = booksSlice.actions;
+export const { add } = booksSlice.actions;
 export { fetchBooks };
