@@ -44,37 +44,12 @@ Project created using React and redux. The bookstore web page lets the user trac
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="#">N/A</a></li>
-    <li><a href="#">N/A</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="#">N/A</a></li>
-  </ul>
-</details>
-
 <!-- Features -->
 
 ### Key Features <a id="key-features"></a>
 
 - Keep track of the book you're currently reading
 - List the books you have read in the past
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a id="live-demo"></a>
-
-
-***Deploy pending ***
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +62,7 @@ Project created using React and redux. The bookstore web page lets the user trac
 
 In order to run this project you need:
 
-> npm run start
+- Node.js
 
 ### Setup
 
@@ -104,14 +79,14 @@ Install this project with:
 
 ### Usage
 
-> npm run start
+> npm start
 
 
 ### Run tests
 
 To run tests, run the following command:
 
-> npm run fix
+> npm run test
 
 ### Deployment
 
@@ -139,7 +114,7 @@ To run tests, run the following command:
 
 - Nicer styling is going to be implemented
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top>back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
