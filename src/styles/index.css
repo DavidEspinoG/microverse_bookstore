@@ -3,17 +3,23 @@
   --gray: #e8e8e8;
   --blue: #0290ff;
   --medium-blue: #307bbe;
+  --white: #ffffff;
 }
 
 html {
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--light-gray);
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
