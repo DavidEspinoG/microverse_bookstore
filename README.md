@@ -112,7 +112,7 @@ To run tests, run the following command:
 
 - Nicer styling is going to be implemented
 
-<p align="right">(<a href="#readme-top>back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## 🤝 Contributing <a id="contributing"></a>
