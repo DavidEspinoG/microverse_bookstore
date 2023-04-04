@@ -41,6 +41,11 @@ const booksSlice = createSlice({
       }];
       return newState;
     },
+    deleteBookLocal(state, action) {
+      const newState = JSON.parse(JSON.stringify(state));
+      delete newState.books[`${action.payload}`];
+      return newState;
+    },
   },
   extraReducers(builder) {
     builder
@@ -58,5 +63,7 @@ const booksSlice = createSlice({
 });
 
 export const booksReducer = booksSlice.reducer;
-export const { setError, setLoading, addBookLocal } = booksSlice.actions;
+export const {
+  setError, setLoading, addBookLocal, deleteBookLocal,
+} = booksSlice.actions;
 export { fetchBooks };
