@@ -110,7 +110,6 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-
 - Nicer styling is going to be implemented
 
 <p align="right">(<a href="#readme-top>back to top</a>)</p>
