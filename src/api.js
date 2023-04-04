@@ -7,9 +7,9 @@ const getBooks = async () => {
   try {
     const res = await axios.get(`${baseUrl}${apiKey}/books`);
     return res.data;
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    return (err);
   }
 };
 
-export { getBooks };
+export default getBooks;
