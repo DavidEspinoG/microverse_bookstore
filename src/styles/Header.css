@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 2px solid var(--light-gray);
 }
 
 .header-left {

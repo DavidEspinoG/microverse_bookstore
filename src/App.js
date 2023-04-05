@@ -9,7 +9,9 @@ function App() {
     <Provider store={store}>
       <main className="main-container">
         <Header />
-        <Outlet />
+        <section className="secondary-container">
+          <Outlet />
+        </section>
       </main>
     </Provider>
   );

@@ -2,4 +2,10 @@
   background-color: var(--white);
   max-width: 80%;
   margin: 12rem auto;
+  border-radius: 3px;
+}
+
+.secondary-container {
+  background-color: var(--gray);
+  padding: 5rem;
 }
