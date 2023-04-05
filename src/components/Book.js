@@ -47,14 +47,19 @@ const Book = ({
             <div className="progress-graph" />
           </div>
           <div className="progress-text">
-            <p>64%</p>
-            <p>Completed</p>
+            <p className="progress-text-number">64%</p>
+            <p className="progress-text-status">Completed</p>
           </div>
         </div>
         <div className="chapter-progress">
-          <p>Current chapter</p>
-          <p>Chapter 17</p>
-          <button type="button">Update progress</button>
+          <p className="chapter-progress-title">Current chapter</p>
+          <p className="chapter-progress-chapter">Chapter 17</p>
+          <button
+            className="update-progress-button"
+            type="button"
+          >
+            Update progress
+          </button>
         </div>
       </div>
     </div>

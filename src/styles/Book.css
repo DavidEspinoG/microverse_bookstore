@@ -56,6 +56,53 @@
   color: var(--medium-blue);
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
-  padding: 0 1.2rem 0 0 ;
+  padding: 0 1.2rem 0 0;
   border-right: 1px solid rgb(212, 212, 212);
+}
+
+.book-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.progress {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.progress-text-number {
+  font-size: 3.2rem;
+  margin: 0;
+  font-weight: 300;
+}
+
+.progress-text-status {
+  color: rgb(149, 148, 148);
+  margin: 0;
+}
+
+.chapter-progress-title {
+  text-transform: uppercase;
+  color: rgb(149, 148, 148);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.chapter-progress-chapter {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0.5rem 0 0 0;
+}
+
+.update-progress-button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  margin-top: 2rem;
 }
