@@ -2,6 +2,9 @@
   background-color: white;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
 }
 
 .progress-graph-container {
@@ -17,4 +20,42 @@
   border-width: 5px;
   border-image-source: linear-gradient(to bottom, var(--medium-blue), #379cf6);
   border-image-slice: 1;
+}
+
+.book-info .category {
+  color: gray;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.book-info .title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.book-info .author {
+  font-size: 1.3rem;
+  color: var(--medium-blue);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.book-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.book-action-button {
+  border: none;
+  background-color: white;
+  color: var(--medium-blue);
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 1.2rem 0 0 ;
+  border-right: 1px solid rgb(212, 212, 212);
 }

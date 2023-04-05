@@ -25,9 +25,20 @@ const Book = ({
           <p className="author">{author}</p>
         </div>
         <div className="book-actions">
-          <p>Comments</p>
-          <button type="button" onClick={() => { clickHandler(id); }}>Remove</button>
-          <p>Edit</p>
+          <button type="button" className="book-action-button">Comments</button>
+          <button
+            type="button"
+            onClick={() => { clickHandler(id); }}
+            className="book-action-button"
+          >
+            Remove
+          </button>
+          <button
+            type="button"
+            className="book-action-button"
+          >
+            Edit
+          </button>
         </div>
       </div>
       <div className="book-right">
