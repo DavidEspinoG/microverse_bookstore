@@ -1,3 +1,4 @@
+import '../styles/Form.css';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../api';
@@ -31,27 +32,33 @@ const Form = () => {
     setAuthor(e.target.value);
   };
   return (
-    <form onSubmit={submitHandler}>
-      <input
-        onChange={changeTitleHandler}
-        type="text"
-        name="title"
-        placeholder="Book title"
-        value={title}
-      />
-      <input
-        onChange={changeAuthorHandler}
-        type="text"
-        name="author"
-        placeholder="Book author"
-        value={author}
-      />
-      <button
-        type="submit"
-      >
-        Add Book
-      </button>
-    </form>
+    <div className="form-container">
+      <h2 className="form-title">Add new book</h2>
+      <form onSubmit={submitHandler} className="form">
+        <input
+          onChange={changeTitleHandler}
+          type="text"
+          name="title"
+          placeholder="Book title"
+          value={title}
+          className="form-title-input"
+        />
+        <input
+          onChange={changeAuthorHandler}
+          type="text"
+          name="author"
+          placeholder="Book author"
+          value={author}
+          className="form-author-input"
+        />
+        <button
+          type="submit"
+          className="submit-button"
+        >
+          Add Book
+        </button>
+      </form>
+    </div>
   );
 };
 

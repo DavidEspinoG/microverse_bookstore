@@ -19,7 +19,7 @@
   height: 5rem;
   border: 5px solid #307bbe;
   border-left-color: #e8e8e8;
-  transform: rotate(10deg);
+  transform: rotate(170deg);
 }
 
 .book-info .category {
@@ -58,6 +58,10 @@
   font-family: 'Montserrat', sans-serif;
   padding: 0 1.2rem 0 0;
   border-right: 1px solid rgb(212, 212, 212);
+}
+
+.book-action-button:hover {
+  cursor: pointer;
 }
 
 .book-action-button:last-of-type {
