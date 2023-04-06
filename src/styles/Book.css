@@ -14,12 +14,12 @@
 }
 
 .progress-graph {
-  width: 4.25rem;
-  height: 4.25rem;
-  border-style: solid;
-  border-width: 5px;
-  border-image-source: linear-gradient(to bottom, var(--medium-blue), #379cf6);
-  border-image-slice: 1;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  transform: rotate(10deg);
 }
 
 .book-info .category {
@@ -58,6 +58,10 @@
   font-family: 'Montserrat', sans-serif;
   padding: 0 1.2rem 0 0;
   border-right: 1px solid rgb(212, 212, 212);
+}
+
+.book-action-button:last-of-type {
+  border: none;
 }
 
 .book-right {
@@ -105,4 +109,17 @@
   padding: 1rem 2rem;
   font-size: 1rem;
   margin-top: 2rem;
+}
+
+.progress-line {
+  width: 0.5px;
+  height: 6rem;
+  background-color: rgba(173, 172, 172, 0.621);
+}
+
+.progress-line-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 6rem;
 }
