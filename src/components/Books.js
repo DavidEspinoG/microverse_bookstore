@@ -1,3 +1,4 @@
+import '../styles/Books.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Book from './Book';
@@ -22,13 +23,14 @@ const Books = () => {
     dispatch(fetchBooks());
   }, [dispatch]);
   return (
-    <div>
+    <div className="books-container">
       {books.map((item) => (
         <Book
           key={item.id}
           title={item.title}
           author={item.author}
           id={item.id}
+          category={item.category}
         />
       ))}
     </div>

@@ -1,0 +1,150 @@
+.book-card {
+  background-color: white;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.progress-graph-container {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.progress-graph {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  transform: rotate(0deg);
+  animation-name: turn;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+}
+
+.book-info .category {
+  color: gray;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.book-info .title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.book-info .author {
+  font-size: 1.3rem;
+  color: var(--medium-blue);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.book-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.book-action-button {
+  border: none;
+  background-color: white;
+  color: var(--medium-blue);
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 1.2rem 0 0;
+  border-right: 1px solid rgb(212, 212, 212);
+}
+
+.book-action-button:hover {
+  cursor: pointer;
+}
+
+.book-action-button:last-of-type {
+  border: none;
+}
+
+.book-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.progress {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.progress-text-number {
+  font-size: 3.2rem;
+  margin: 0;
+  font-weight: 300;
+}
+
+.progress-text-status {
+  color: rgb(149, 148, 148);
+  margin: 0;
+}
+
+.chapter-progress-title {
+  text-transform: uppercase;
+  color: rgb(149, 148, 148);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.chapter-progress-chapter {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0.5rem 0 0 0;
+}
+
+.update-progress-button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.update-progress-button:hover {
+  cursor: pointer;
+}
+
+.progress-line {
+  width: 0.5px;
+  height: 6rem;
+  background-color: rgba(173, 172, 172, 0.621);
+}
+
+.progress-line-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 6rem;
+}

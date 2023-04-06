@@ -1,16 +1,18 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import './styles/App.css';
+import { Outlet } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import Header from './components/Header';
 
 function App() {
   return (
     <Provider store={store}>
-      <h1>Book Store</h1>
-      <nav>
-        <NavLink to="/">Books</NavLink>
-        <NavLink to="/categories">Categories</NavLink>
-      </nav>
-      <Outlet />
+      <main className="main-container">
+        <Header />
+        <section className="secondary-container">
+          <Outlet />
+        </section>
+      </main>
     </Provider>
   );
 }

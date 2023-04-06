@@ -1,3 +1,4 @@
+import '../styles/Categories.css';
 import { useState } from 'react';
 
 const Categories = () => {
@@ -11,8 +12,14 @@ const Categories = () => {
 
   return (
     <>
-      {show ? <p>The project is in progress</p> : ''}
-      <button type="button" onClick={handleClick}>Check for status</button>
+      {show ? <p className="inprogress-text">This section is in progress</p> : ''}
+      <button
+        className="categories-button"
+        type="button"
+        onClick={handleClick}
+      >
+        Check for status
+      </button>
     </>
   );
 };

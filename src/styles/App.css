@@ -1,0 +1,11 @@
+.main-container {
+  background-color: var(--white);
+  max-width: 85%;
+  margin: 9rem auto;
+  border-radius: 3px;
+}
+
+.secondary-container {
+  background-color: var(--gray);
+  padding: 5rem;
+}
