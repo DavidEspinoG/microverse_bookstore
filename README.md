@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -51,7 +52,14 @@ Project created using React and redux. The bookstore web page lets the user trac
 - List the books you have read in the past
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- LIVE DEMO -->
 
+## 🚀 Live Demo <a id="live-demo"></a>
+
+
+- [Live demo](https://bookstore-7ktx.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a id="getting-started"></a>
