@@ -7,6 +7,20 @@
   padding: 2rem;
 }
 
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .progress-graph-container {
   width: 5.625rem;
   height: 5.62rem;
@@ -19,7 +33,10 @@
   height: 5rem;
   border: 5px solid #307bbe;
   border-left-color: #e8e8e8;
-  transform: rotate(170deg);
+  transform: rotate(0deg);
+  animation-name: turn;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
 }
 
 .book-info .category {
@@ -113,6 +130,10 @@
   padding: 1rem 2rem;
   font-size: 1rem;
   margin-top: 2rem;
+}
+
+.update-progress-button:hover {
+  cursor: pointer;
 }
 
 .progress-line {
